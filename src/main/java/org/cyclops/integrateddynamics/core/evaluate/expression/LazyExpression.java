@@ -72,8 +72,8 @@ public class LazyExpression<V extends IValue> extends VariableAdapter<V> impleme
 
     @Override
     public void invalidate() {
-        super.invalidate();
         valueCache.removeValue(id);
+        super.invalidate();
     }
 
     public IOperator getOperator() {
