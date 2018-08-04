@@ -90,9 +90,7 @@ public class TileVariablestore extends TileCableConnectableInventory
             for (IVariableFacade variableFacade : variableContainer.getVariableCache().values()) {
                 IVariable<?> variable = variableFacade.getVariable(partNetwork);
                 if (variable != null) {
-                    if (variable.canInvalidate()) {
-                        variable.invalidate();
-                    }
+                    variable.invalidate();
                 }
             }
         }
